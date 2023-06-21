@@ -1,0 +1,50 @@
+exact numerical answers for each part is shown in cvx output of each .m file (one file for each part of the project)
+
+
+
+1) 
+(optimal output for the seven nonzero generator buses in Pg, in order. The rest are zero for Pg)
+Pg7 = 
+   16.6067
+  -10.4444
+    0.6211
+    3.7256
+   -3.2352
+   -3.3278
+   -1.2591
+
+cvx_optval =
+  -32.4730
+
+
+
+2) 
+Bus 4 has the lowest prices (around 1.80) and bus 9 has the highest 
+prices (around 5.75). Bus 4 is a local bus, and the capacity of the line 
+connecting it to bus 6 (which is a generator bus) was set to 
+zero. Bus 9 is a generator bus, and the capacity of the line 
+connecting it to bus 8 (which is a generator bus) was 
+set to zero. Here we identify the lowest priced bus as a 
+local bus connected to a generator bus by a line with 
+capacity zero, and we identify the highest priced bus as a 
+generator bus connected to another generator bus by a line
+with capacity zero. Thus my intuition is amount of loads and 
+the availability of other generators connected to these 
+buses leads to the maximal and minimal prices at these
+aformentioned buses 4 and 9. 
+ 
+
+Referencing the cvx output for the hourly pricing of
+buses 4, 9, and 33 (arbitrarily selected) we see that the
+price for an individual bus is relatively stable throughout 
+the 24 hours, with bus 4 having prices near 1.80, bus 9 
+having prices near 5.75, and bus 33 having prices near 4.25.
+However the prices do follow a slight hourly pattern with the 
+buses' higher end prices occuring between hours 18-22. 
+
+
+
+
+3) 
+As shown by running the .m file for part 3, the LP successfully detects all attacks for z values of 1,2,3
+
